@@ -1,0 +1,238 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+   
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="100" >
+    <TextView 
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hello"/>
+
+ <!--   <LinearLayout
+        android:id="@+id/heading"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="10"
+        android:background="@drawable/topbg"
+        android:gravity="center" >
+ style="@style/pagebackground2"
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/registerpageheading"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5"
+        android:gravity="center" >
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/mobilenolinearmain"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:gravity="center"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:id="@+id/mobilenolinear"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:weightSum="100" >
+
+            <RelativeLayout
+                android:id="@+id/spinnervirtual"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="20"
+                android:orientation="horizontal"
+                android:paddingLeft="10dp" >
+
+                <ImageView
+                    android:id="@+id/spinimage"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/spin" />
+
+                <TextView
+                    android:id="@+id/countrycode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/spinimage"
+                    android:background="@drawable/user_name_textbox"
+                    android:gravity="center"
+                    android:textColor="@color/black" />
+
+                <Spinner
+                    android:id="@+id/hiddenspinner"
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:entries="@array/country_arrays" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="20"
+                android:orientation="horizontal"
+                android:paddingLeft="3dp"
+                android:paddingRight="3dp" >
+
+                <TextView
+                    android:id="@+id/countrycallingcode"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/graybutton"
+                    android:gravity="center"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/mobilenolinearinner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="60"
+                android:orientation="horizontal"
+                android:paddingRight="10dp" >
+
+                <ImageView
+                    android:id="@+id/mobileicon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:background="@drawable/mobile_icon2" />
+
+                <EditText
+                    android:id="@+id/mobilenoedit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toLeftOf="@id/mobileicon"
+                    android:background="@drawable/user_name_textbox"
+                    android:ems="10"
+                    android:hint="@string/Mobilenohint"
+                    android:inputType="phone"
+                    android:paddingLeft="5dp" />
+            </RelativeLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/mobilemsglinearinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:visibility="invisible" >
+
+            <TextView
+                android:id="@+id/invalidphnomsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/invalid_ph_no"
+                android:textColor="@color/fire_red" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/firstnamelinearmain"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <RelativeLayout
+            android:id="@+id/firstnamelinearinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center" >
+
+            <ImageView
+                android:id="@+id/nameicon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/user_icon2" />
+
+            <EditText
+                android:id="@+id/firstnametxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toLeftOf="@id/nameicon"
+                android:background="@drawable/user_name_textbox"
+                android:ems="10"
+                android:hint="@string/namehint"
+                android:inputType="textPersonName"
+                android:paddingLeft="5dp" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/namemsglinearinner"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:visibility="invisible" >
+
+            <TextView
+                android:id="@+id/invalidnaemnomsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/invalid_name"
+                android:textColor="@color/fire_red" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/buttonlinear"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="15"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp"
+        android:weightSum="100" >
+
+        <Button
+            android:id="@+id/ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="50"
+            android:background="@drawable/register"
+            android:text="@string/registerbtnetxt"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/btnEdit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_weight="50"
+            android:background="@drawable/register"
+            android:text="Edit"
+            android:textColor="@color/white"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="40"
+        android:gravity="center" >
+    </LinearLayout>-->
+
+</LinearLayout> 

@@ -1,0 +1,55 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:mySwitch="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/bg_edit_task_dialog" >
+
+        <com.taskmanager.widgets.CustomButton
+            android:id="@+id/UpdateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/blue_btn2"
+            android:gravity="center"
+            android:text="Update"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:id="@+id/relativeEdit"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/UpdateButton"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="30dp"
+            android:orientation="vertical" >
+
+            <com.taskmanager.adapter.edit.EditCustomAutoCompleteView
+                android:id="@+id/addtaskedit"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:cursorVisible="true"
+                android:hint="@string/newtaskhint"
+                android:inputType="textMultiLine"
+                android:maxLength="200"
+                android:maxLines="3"
+                android:padding="10dp"
+                android:textColorHint="@color/hint_gray"
+                android:textSize="15sp" />
+            
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@drawable/createtask" />
+        </LinearLayout>
+    </RelativeLayout>
+
+</FrameLayout>

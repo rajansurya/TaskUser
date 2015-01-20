@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_popup"
+    android:orientation="horizontal" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <com.taskmanager.widgets.CustomButton
+                android:id="@+id/CloseButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grid_close" />
+
+            <com.taskmanager.widgets.CustomButton
+                android:id="@+id/CopyButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grid_copy" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <com.taskmanager.widgets.CustomButton
+                android:id="@+id/AlarmButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grid_allarm" />
+
+            <com.taskmanager.widgets.CustomButton
+                android:id="@+id/ShareButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grid_share" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/BottomLayout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+
+            <com.taskmanager.widgets.CustomButton
+                android:id="@+id/EditButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grid_edit" />
+
+            <com.taskmanager.widgets.CustomButton
+                android:id="@+id/SMSButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/grid_open" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/RightLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <com.taskmanager.widgets.CustomButton
+            android:id="@+id/DeleteButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grid_delete" />
+
+        <com.taskmanager.widgets.CustomButton
+            android:id="@+id/DueDateButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grid_calendar" />
+
+        <com.taskmanager.widgets.CustomButton
+            android:id="@+id/AssigneeButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/grid_assign" />
+    </LinearLayout>
+
+</LinearLayout>

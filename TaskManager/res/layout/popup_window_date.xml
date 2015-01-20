@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="#676767"
+    android:orientation="vertical"
+    android:padding="1dip" >
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@android:color/white"
+        android:orientation="vertical" >
+
+        <TextView
+            
+            android:id="@+id/today"
+            android:layout_width="fill_parent"
+            android:layout_height="30dip"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:text="Today" />
+
+        <TextView
+            android:id="@+id/tomorrow"
+            android:layout_width="fill_parent"
+            android:layout_height="30dip"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:text="Tomorrow" />
+
+        <TextView
+            android:id="@+id/nextMon"
+            android:layout_width="fill_parent"
+            android:layout_height="30dip"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:text="Next monday" />
+
+        <TextView
+            android:id="@+id/selectDate"
+            android:layout_width="fill_parent"
+            android:layout_height="30dip"
+            android:background="#AEAEAE"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dip"
+            android:paddingRight="10dip"
+            android:text="Select a date.." />
+    </LinearLayout>
+
+</LinearLayout>

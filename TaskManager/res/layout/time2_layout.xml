@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:layout_height="fill_parent"
+  android:layout_width="fill_parent"
+  android:layout_marginTop="100dp"
+  android:orientation="vertical"
+  
+ >
+
+<!--   <LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent"
+    android:layout_gravity="center_horizontal"
+    android:paddingLeft="12dp"
+    android:paddingRight="12dp"
+    android:paddingTop="20dp">
+
+    <kankan.wheel.widget.WheelView
+      android:id="@+id/day"
+      android:layout_height="wrap_content"
+      android:layout_width="fill_parent"
+      android:layout_weight="1" />
+    <kankan.wheel.widget.WheelView
+      android:id="@+id/hour"
+      android:layout_height="wrap_content"
+      android:layout_width="70dp" />
+    <kankan.wheel.widget.WheelView
+      android:id="@+id/mins"
+      android:layout_height="wrap_content"
+      android:layout_width="70dp" />
+  </LinearLayout> -->
+
+  <!-- <com.taskmanager.wheel.widget.DateTimeWheel
+    android:layout_height="wrap_content"
+    android:layout_width="fill_parent" /> -->
+  
+ <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="8dp"
+                        android:layout_marginRight="5dp"
+                       
+                        android:clickable="false"
+                        android:text="Cancel"
+                       android:id="@+id/btn"
+                        android:textSize="18sp" />
+</LinearLayout>
