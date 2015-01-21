@@ -1,0 +1,731 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#FFFFFF" >
+
+    <RelativeLayout
+        android:id="@+id/Header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_create_header"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp" >
+
+        <com.taskmanager.widgets.CustomImageButton
+            android:id="@+id/addtaskbtnlinear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/button_create" />
+
+        <com.taskmanager.widgets.CustomImageButton
+            android:id="@+id/BackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:src="@drawable/create_cross" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Header"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <com.taskmanager.autocom.CustomAutoCompleteView
+            android:id="@+id/AutoCompleteView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@null"
+            android:completionThreshold="1"
+            android:dropDownHeight="280dp"
+            android:dropDownWidth="wrap_content"
+            android:gravity="top|left"
+            android:hint="\@john this is a task for you related to #myCategory"
+            android:inputType="textMultiLine"
+            android:maxLength="200"
+            android:maxLines="5"
+            android:textColorHint="@color/dark_gray"
+            android:textSize="18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/BottomLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/bottom_strip_bg"
+        android:orientation="horizontal" >
+
+        <com.taskmanager.widgets.CustomImageButton
+            android:id="@+id/CalendarButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/create_calendar_btn" />
+
+        <com.taskmanager.widgets.CustomImageButton
+            android:id="@+id/AlarmButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/create_alarm_icon" />
+
+        <com.taskmanager.widgets.CustomImageButton
+            android:id="@+id/AssignButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/create_assign_btn" />
+
+        <com.taskmanager.widgets.CustomImageButton
+            android:id="@+id/FireButton"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@null"
+            android:src="@drawable/create_fire_btn" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/BottomLayout"
+        android:orientation="vertical"
+        android:padding="10dp" >
+
+        <LinearLayout
+            android:id="@+id/DeadLineLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/DeadLineTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_create_calender"
+                android:drawablePadding="4dp"
+                android:singleLine="true"
+                android:textColor="#707070"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/DeadLineCrossButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/ic_create_cancle" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/AlarmLineLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/AlarmTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_create_alarm"
+                android:drawablePadding="4dp"
+                android:singleLine="true"
+                android:textColor="#707070"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/AlarmCrossButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/ic_create_cancle" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/FireLineLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="gone" >
+
+            <TextView
+                android:id="@+id/FireTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@drawable/ic_create_fire_red"
+                android:drawablePadding="4dp"
+                android:singleLine="true"
+                android:text="Very Urgent"
+                android:textColor="#707070"
+                android:textSize="14sp" />
+
+            <ImageView
+                android:id="@+id/FireCrossButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:src="@drawable/ic_create_cancle" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="#d8dee5"
+        android:orientation="vertical"
+        android:visibility="gone" >
+
+        <LinearLayout
+            android:id="@+id/asigneeLyout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="vertical" />
+
+        <LinearLayout
+            android:id="@+id/linearTop"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:paddingBottom="10dp" >
+
+            <LinearLayout
+                android:id="@+id/linearTopSecnd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="100" >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="0dp"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true" >
+                </LinearLayout>
+
+                <ScrollView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" >
+
+                    <LinearLayout
+                        android:id="@+id/linearEditView"
+                        android:layout_width="fill_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="90"
+                        android:background="@android:color/transparent"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="10dp"
+                        android:weightSum="90" >
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="40"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingBottom="5dp"
+                            android:paddingTop="0dp" >
+
+                            <RelativeLayout
+                                android:id="@+id/relativeEdit"
+                                android:layout_width="fill_parent"
+                                android:layout_height="80dp"
+                                android:orientation="vertical" >
+
+                                <com.taskmanager.autocom.CustomAutoCompleteView
+                                    android:id="@+id/addtaskedit"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="75dp"
+                                    android:layout_toRightOf="@+id/addtaskediticon"
+                                    android:background="#FFFFFF"
+                                    android:completionThreshold="1"
+                                    android:cursorVisible="false"
+                                    android:dropDownWidth="150dp"
+                                    android:gravity="center_vertical"
+                                    android:hint="@string/newtaskhint"
+                                    android:inputType="textMultiLine"
+                                    android:maxLength="100"
+                                    android:maxLines="4"
+                                    android:paddingLeft="10dp"
+                                    android:singleLine="true"
+                                    android:textColorHint="@color/dark_gray"
+                                    android:textSize="14sp" />
+
+                                <ImageView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_below="@+id/addtaskedit"
+                                    android:background="@drawable/createtask" />
+
+                                <ImageView
+                                    android:id="@+id/addtaskediticon"
+                                    android:layout_width="50dp"
+                                    android:layout_height="44dp"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="1dp"
+                                    android:background="@drawable/create_task_icon"
+                                    android:contentDescription="@string/user_description"
+                                    android:visibility="gone" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/relativeSelectAssignee"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                android:background="#FFFFFF"
+                                android:orientation="vertical" >
+
+                                <ScrollView
+                                    android:id="@+id/asigneeslistscroll"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="50dp"
+                                    android:layout_toLeftOf="@+id/contacts_add"
+                                    android:background="#FFFFFF"
+                                    android:stackFromBottom="true"
+                                    android:transcriptMode="alwaysScroll" >
+
+                                    <RelativeLayout
+                                        android:id="@+id/data"
+                                        android:layout_width="fill_parent"
+                                        android:layout_height="match_parent"
+                                        android:orientation="horizontal"
+                                        android:paddingTop="8dp" >
+
+                                        <ImageView
+                                            android:id="@+id/asigneeicon"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_gravity="center_vertical"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_marginTop="2dp"
+                                            android:background="@drawable/user" />
+
+                                        <TextView
+                                            android:id="@+id/assign_text"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginLeft="10dp"
+                                            android:layout_toRightOf="@+id/asigneeicon"
+                                            android:paddingTop="8dp"
+                                            android:text="Select Assignee"
+                                            android:textColor="@color/dark_gray"
+                                            android:textSize="14sp" />
+
+                                        <LinearLayout
+                                            android:id="@+id/asigneename"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginBottom="10dp"
+                                            android:layout_toRightOf="@+id/assign_text"
+                                            android:gravity="center_vertical"
+                                            android:orientation="vertical"
+                                            android:paddingLeft="10dp" >
+                                        </LinearLayout>
+                                    </RelativeLayout>
+                                </ScrollView>
+
+                                <Button
+                                    android:id="@+id/contacts_add"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginRight="10dp"
+                                    android:background="@drawable/add_contact" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/reativeAssigner1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="0dp"
+                                android:background="#FFFFFF" >
+
+                                <TextView
+                                    android:id="@+id/textViewAssigner1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:paddingBottom="8dp"
+                                    android:textColor="@color/red"
+                                    android:textSize="13sp" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:id="@+id/reativeAssigner"
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:layout_marginTop="10dp"
+                                android:background="#FFFFFF"
+                                android:gravity="center_vertical" >
+
+                                <CheckBox
+                                    android:id="@+id/checkBoxSms"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="10dp"
+                                    android:button="@drawable/checkregistr"
+                                    android:checked="true" />
+
+                                <TextView
+                                    android:id="@+id/textViewAssigner"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="4dp"
+                                    android:layout_toRightOf="@+id/checkBoxSms"
+                                    android:text=""
+                                    android:textSize="13sp" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearPriority"
+                            android:layout_width="fill_parent"
+                            android:layout_height="0dp"
+                            android:layout_marginTop="5dp"
+                            android:layout_weight="20"
+                            android:background="#FFFFFF"
+                            android:gravity="bottom"
+                            android:orientation="vertical"
+                            android:paddingTop="0dp"
+                            android:visibility="gone"
+                            android:weightSum="100" >
+
+                            <RelativeLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="69.51" >
+
+                                <TextView
+                                    android:id="@+id/textView1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:text="@string/prioritytxtlable"
+                                    android:textColor="@color/crete_blue"
+                                    android:textSize="16sp" />
+
+                                <ImageView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_alignLeft="@+id/textView1"
+                                    android:layout_below="@+id/textView1"
+                                    android:layout_marginRight="10dp"
+                                    android:layout_marginTop="5dp"
+                                    android:background="@drawable/line_bg" />
+                            </RelativeLayout>
+
+                            <RadioGroup
+                                android:id="@+id/priorityradio"
+                                android:layout_width="280dp"
+                                android:layout_height="62dp"
+                                android:layout_marginLeft="10dp"
+                                android:layout_weight="20"
+                                android:gravity="left"
+                                android:orientation="horizontal"
+                                android:weightSum="100" >
+
+                                <RadioButton
+                                    android:id="@+id/lowpriorityradio"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:button="@drawable/blue_radio_button"
+                                    android:text="@string/low_priority_txt"
+                                    android:textColor="@color/black"
+                                    android:textSize="13sp"
+                                    android:visibility="gone" />
+
+                                <RadioButton
+                                    android:id="@+id/mediumpriorityradio"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:button="@drawable/blue_radio_button"
+                                    android:text="@string/high_priority_txt"
+                                    android:textColor="@color/light_black"
+                                    android:textSize="15sp" />
+
+                                <RadioButton
+                                    android:id="@+id/highpriorityradio"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:button="@drawable/blue_radio_button"
+                                    android:text="@string/high_priority_txt"
+                                    android:textColor="@color/light_black"
+                                    android:textSize="15sp"
+                                    android:visibility="gone" />
+
+                                <RadioButton
+                                    android:id="@+id/firepriorityradio"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_vertical"
+                                    android:layout_marginLeft="10dp"
+                                    android:button="@drawable/blue_radio_button"
+                                    android:text="@string/fire_priority_txt"
+                                    android:textColor="@color/light_black"
+                                    android:textSize="15sp" />
+                            </RadioGroup>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:background="#FFFFFF"
+                            android:gravity="center"
+                            android:orientation="vertical"
+                            android:paddingLeft="10dp"
+                            android:paddingRight="10dp"
+                            android:visibility="gone" >
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:contentDescription="@string/divider_description"
+                                android:src="@drawable/create_task_divider" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/linearDate"
+                            android:layout_width="fill_parent"
+                            android:layout_height="0dp"
+                            android:layout_weight="40"
+                            android:background="#FFFFFF"
+                            android:orientation="vertical"
+                            android:visibility="gone"
+                            android:weightSum="100" >
+
+                            <RelativeLayout
+                                android:id="@+id/realitveDate"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="30" >
+
+                                <TextView
+                                    android:id="@+id/txtDeadlinelabel"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_marginLeft="10dp"
+                                    android:text="@string/deadlinelable"
+                                    android:textColor="@color/crete_blue"
+                                    android:textSize="16sp"
+                                    android:visibility="visible" />
+
+                                <ImageView
+                                    android:id="@+id/img_line_blue"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="1dp"
+                                    android:layout_below="@+id/txtDeadlinelabel"
+                                    android:layout_marginLeft="10dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginTop="3dp"
+                                    android:layout_toLeftOf="@+id/deadlinecheck"
+                                    android:background="@drawable/line_bg"
+                                    android:visibility="visible" />
+
+                                <ToggleButton
+                                    android:id="@+id/deadlinecheck"
+                                    android:layout_width="51dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_above="@+id/img_line_blue"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_marginRight="10dp"
+                                    android:background="@drawable/deadline_toggle"
+                                    android:textOff=""
+                                    android:textOn="" />
+                            </RelativeLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="35"
+                                android:orientation="horizontal"
+                                android:paddingTop="10dp"
+                                android:weightSum="100" >
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="50" >
+
+                                    <TextView
+                                        android:id="@+id/deadlinedate"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="10dp"
+                                        android:background="@drawable/date_boder"
+                                        android:gravity="center"
+                                        android:text="26/09/2013"
+                                        android:textColor="@color/light_gray_date"
+                                        android:textSize="15sp" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="50"
+                                    android:gravity="right" >
+
+                                    <TextView
+                                        android:id="@+id/deadlinetime"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginRight="10dp"
+                                        android:padding="5dp"
+                                        android:text="18:00"
+                                        android:textColor="@color/light_gray_date"
+                                        android:textSize="15sp" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="20"
+                                android:orientation="horizontal"
+                                android:paddingBottom="5dp"
+                                android:paddingTop="10dp"
+                                android:weightSum="100" >
+
+                                <RelativeLayout
+                                    android:id="@+id/realitveDate_rem"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="30" >
+
+                                    <TextView
+                                        android:id="@+id/txtDeadlinelabel_rem"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentLeft="true"
+                                        android:layout_marginLeft="10dp"
+                                        android:text="@string/reminderlinelable"
+                                        android:textColor="@color/crete_blue"
+                                        android:textSize="16sp"
+                                        android:visibility="visible" />
+
+                                    <ImageView
+                                        android:id="@+id/img_line_blue_rem"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="1dp"
+                                        android:layout_below="@+id/txtDeadlinelabel_rem"
+                                        android:layout_marginLeft="10dp"
+                                        android:layout_marginRight="8dp"
+                                        android:layout_marginTop="3dp"
+                                        android:layout_toLeftOf="@+id/remindericons"
+                                        android:background="@drawable/line_bg"
+                                        android:visibility="visible" />
+
+                                    <ImageView
+                                        android:id="@+id/remindericons"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_marginBottom="15dp"
+                                        android:layout_marginLeft="25dp"
+                                        android:layout_marginRight="10dp"
+                                        android:background="@drawable/alarm"
+                                        android:clickable="false"
+                                        android:contentDescription="@string/alarm_icon_description"
+                                        android:paddingRight="5dp" />
+                                </RelativeLayout>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:orientation="horizontal"
+                                android:paddingBottom="10dp"
+                                android:weightSum="100" >
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="50"
+                                    android:gravity="left" >
+
+                                    <Spinner
+                                        android:id="@+id/reminderspinner"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="37dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:background="@drawable/date_boder"
+                                        android:gravity="center" />
+
+                                    <TextView
+                                        android:id="@+id/alarTxtView"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/date_boder"
+                                        android:gravity="center"
+                                        android:text="1 hour before"
+                                        android:textColor="@color/light_gray_date"
+                                        android:textSize="15sp"
+                                        android:visibility="gone" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="50"
+                                    android:gravity="right"
+                                    android:visibility="invisible" >
+
+                                    <Spinner
+                                        android:id="@+id/respinner"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="37dp"
+                                        android:layout_marginLeft="10dp"
+                                        android:background="@drawable/date_boder"
+                                        android:gravity="center" />
+
+                                    <TextView
+                                        android:id="@+id/aTxtView"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/date_boder"
+                                        android:gravity="center"
+                                        android:text="1 hour before"
+                                        android:textColor="@color/light_gray_date"
+                                        android:textSize="15sp"
+                                        android:visibility="gone" />
+                                </LinearLayout>
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

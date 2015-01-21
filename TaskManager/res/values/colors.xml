@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+
+    <color name="black">#000000</color>
+    <color name="white">#FFFFFF</color>
+    <color name="task_list_gray">#606060</color>
+    <color name="navy_blue">#32435D</color>
+    <color name="light_gray">#CBC5C5</color>
+    <color name="fire_red">#B6482E</color>
+    <color name="text_red">#EE2C33</color>
+    <color name="name_blue">#2489C5</color>
+    <color name="dark_gray">#878585</color>
+    <color name="blue">#2489C5</color>
+    <color name="bg_red">#ED1C24</color>
+    <color name="hint_gray">#DFDBDC</color>
+    <color name="grey">#696969</color>
+    <color name="grey_menue">#696969</color>
+    <color name="light_gray_date">#D3D3D3</color>
+    <color name="crete_blue">#00BFFF</color>
+    <color name="trans">#00000000 </color>
+    <color name="light_black">#515151 </color>
+    <!-- <color name="light_blue">#4BA6FF</color> -->
+     <color name="light_blue">#2489c5</color>
+    <color name="reddish">#FAD9D9</color>
+    <color name="red">#FF0000</color>
+    
+    <color name="transparent">#00FFFFFF</color>
+    <color name="selected_tab_text_color">#03a9f4</color>
+    <color name="unselected_tab_text_color">#707070</color>
+    
+    <color name="slider_item_selected_text_color">#222222</color>
+    <color name="slider_item_unselected_text_color">#222222</color>
+    <color name="slider_item_selected_bg_color">#f6f6f6</color>
+
+    <color name="snooz_item_selected_bg_color">#32b1fa</color>
+    <color name="snooz_item_unselected_bg_color">#e0e0e0</color>
+    <color name="snooz_item_selected_text_color">#FFFFFF</color>
+    <color name="snooz_item_unselected_text_color">#707070</color>
+
+    
+    <color name="holo_done_task">#0f9d58</color>
+    <color name="holo_later_task">#fd9800</color>
+    <color name="holo_task_box">#03a9f4</color>
+    <color name="holo_red_light">#fa5c1a</color>  
+</resources>
