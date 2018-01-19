@@ -106,6 +106,10 @@
             android:name="com.taskmanager.ui.GoogleSyncActivity"
             android:screenOrientation="portrait"
             android:windowSoftInputMode="stateHidden|adjustPan" />
+			<activity
+            android:name="com.taskmanager.ui.TermAndConditionActivity"
+            android:screenOrientation="portrait"
+            android:windowSoftInputMode="stateHidden|adjustPan" />
         <!-- created by ibm_admin at 2014-03-25 12:14:52 -->
         <service android:name="com.taskmanager.background.BGSyncService" />
         <!--
