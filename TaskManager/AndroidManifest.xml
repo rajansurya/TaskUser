@@ -112,6 +112,7 @@
             android:windowSoftInputMode="stateHidden|adjustPan" />
         <!-- created by ibm_admin at 2014-03-25 12:14:52 -->
         <service android:name="com.taskmanager.background.BGSyncService" />
+		<service android:name="com.taskmanager.background.BGSyncService" />
         <!--
         <receiver
             android:name="com.taskmanager.background.ReminderReceiver"
